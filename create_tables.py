@@ -1,7 +1,7 @@
 # create_tables.py
 
 from sqlalchemy import create_engine
-from models import Base  # Импортируем Base из файла models
+from models import Base  # Импортируем Base из файла model
 from config import DATABASE_URL  # Строка подключения из config
 
 # Создаем движок для подключения к базе данных

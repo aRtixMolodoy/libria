@@ -57,7 +57,7 @@ def main_menu():
     btn_view_books = types.KeyboardButton("📚 Просмотр книг")
     btn_view_cart = types.KeyboardButton("🛒 Корзина")
     btn_checkout = types.KeyboardButton("✅ Оформить заказ")
-    btn_search_category = types.KeyboardButton("🔍 Поиск по категории")  # Новая кнопка
+    btn_search_category = types.KeyboardButton("🔍 Поиск по категории")
     btn_help = types.KeyboardButton("ℹ️ Помощь")
     markup.add(btn_view_books, btn_view_cart)
     markup.add(btn_checkout)
@@ -76,8 +76,8 @@ def admin_menu():
     btn_export_excel = types.KeyboardButton("📤 Экспорт в Excel")
     btn_export_csv = types.KeyboardButton("📤 Экспорт в CSV")
     btn_force_backup = types.KeyboardButton("🔄 Принудительный бэкап")
-    btn_scrape = types.KeyboardButton("🔄 Парсить книги")  # Новая кнопка
-    btn_search_category = types.KeyboardButton("🔍 Поиск по категории")  # Новая кнопка
+    btn_scrape = types.KeyboardButton("🔄 Парсить книги")
+    btn_search_category = types.KeyboardButton("🔍 Поиск по категории")
     btn_help = types.KeyboardButton("ℹ️ Помощь")
     markup.add(btn_add_user, btn_promote_user)
     markup.add(btn_view_books, btn_view_cart)
@@ -239,7 +239,7 @@ def cmd_goto(message):
     show_books(message, page)
 
 
-# Обработчик выбора категории должен быть **до** общего обработчика
+# Обработчик выбора категории
 @bot.message_handler(func=lambda message: is_catalog_exists(message.text))
 def handle_category_selection(message):
     category_name = message.text
@@ -264,7 +264,7 @@ def handle_category_selection(message):
     logging.info(f"Пользователь {message.from_user.id} выбрал категорию '{catalog.catalog_name}' для поиска.")
 
 
-# Обработчик кнопок должен быть **после** обработчика выбора категории
+# Обработчик кнопок
 @bot.message_handler(func=lambda message: True)
 def handle_buttons(message):
     db = SessionLocal()

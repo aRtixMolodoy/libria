@@ -14,7 +14,7 @@ API_TOKEN = os.getenv('API_TOKEN')
 # Список Telegram Chat IDs администраторов
 ADMIN_CHAT_IDS = [
     int(os.getenv('ADMIN_TELEGRAM_ID')),
-    # Добавьте дополнительные Chat ID при необходимости, без дублирования
+    # Возможность добавить id
 ]
 
 DB_USER = os.getenv('DB_USER')

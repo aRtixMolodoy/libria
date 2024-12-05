@@ -53,7 +53,7 @@ def create_dump():
 
         result = subprocess.run(
             [
-                r"D:/progi/postgres/bin/pg_dump.exe",  # Предполагается, что pg_dump доступен в PATH
+                r"D:/progi/postgres/bin/pg_dump.exe",  # Путь к pg_dump
                 "-U", DB_USER,
                 "-F", "c",  # Формат custom
                 "-b",       # Инклюзия больших объектов

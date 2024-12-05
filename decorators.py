@@ -1,4 +1,4 @@
-# decorators.py
+# decorators
 
 from functools import wraps
 from telebot import types

@@ -1,4 +1,4 @@
-# crud.py
+# crud
 
 from sqlalchemy.orm import Session
 from models import User, Author, Genre, Catalog, Book, Order, OrderItem

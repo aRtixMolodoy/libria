@@ -17,7 +17,7 @@ def scrape_books():
 
     db = SessionLocal()
     try:
-        catalog = get_or_create_catalog(db, catalog_name="Love")  # Пример: все книги с темой "Love" в каталоге "Love"
+        catalog = get_or_create_catalog(db, catalog_name="Love")
         logging.info(f"Используется каталог ID: {catalog.id} - {catalog.catalog_name}")
 
         while True:

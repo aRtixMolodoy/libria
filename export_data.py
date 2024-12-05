@@ -1,4 +1,4 @@
-# export_data.py
+# export_data
 
 import pandas as pd
 import logging
